@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Michael Mpemba | Senior System Architect</title>
+
+    <!-- Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Sora', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
+                    colors: { primary: '#2563eb', secondary: '#4f46e5', surface: '#f8fafc' }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #1e293b;
+        }
+
+        .text-glow {
+            text-shadow: 0 0 15px rgba(37, 99, 235, 0.2);
+        }
+
+        /* Floating Glass Dock */
+        .glass-dock {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Interactive System Hub */
+        .system-node {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .system-node:hover {
+            transform: scale(1.1);
+            border-color: #2563eb;
+        }
+
+        .system-node.active {
+            background: #2563eb;
+            color: white;
+            transform: scale(1.15);
+            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Tech Arsenal Cards */
+        .arsenal-card {
+            border: 1px solid #f1f5f9;
+            background: #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .arsenal-card:hover {
+            border-color: #2563eb;
+            background: #f0f7ff;
+        }
+
+        .image-mask {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 70%;
+            background: #2563eb;
+            transition: all 1s ease-in-out;
+        }
+
+        .image-mask:hover {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-blue-100">
+
+    <!-- Floating Navbar -->
+    <nav
+        class="fixed top-8 left-1/2 -translate-x-1/2 z-[100] glass-dock px-8 py-4 rounded-full flex items-center gap-10">
+        <a href="#home" class="text-xs font-black uppercase tracking-widest hover:text-primary transition">Home</a>
+        <a href="#arsenal"
+            class="text-xs font-black uppercase tracking-widest hover:text-primary transition">Arsenal</a>
+        <a href="#ecosystem"
+            class="text-xs font-black uppercase tracking-widest hover:text-primary transition">Ecosystem</a>
+        <a href="#contact" class="text-xs font-black bg-primary text-white px-5 py-2 rounded-full shadow-lg">Hire Me</a>
+    </nav>
+
+    <!-- Social Dock (Right) -->
+    <div class="fixed right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-5">
+        <a href="https://wa.me/255714957154"
+            class="w-12 h-12 flex items-center justify-center rounded-full glass-dock hover:bg-green-500 hover:text-white transition shadow-xl"><i
+                class="fab fa-whatsapp text-xl"></i></a>
+        <a href="https://linkedin.com"
+            class="w-12 h-12 flex items-center justify-center rounded-full glass-dock hover:bg-blue-600 hover:text-white transition shadow-xl"><i
+                class="fab fa-linkedin-in text-xl"></i></a>
+        <a href="https://github.com"
+            class="w-12 h-12 flex items-center justify-center rounded-full glass-dock hover:bg-slate-900 hover:text-white transition shadow-xl"><i
+                class="fab fa-github text-xl"></i></a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center px-6 pt-20">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center w-full">
+            <div data-aos="fade-right">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-primary text-[10px] font-black uppercase tracking-[0.2em] mb-8 border border-blue-100">
+                    <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                    Senior Lead Developer // 6 Years Mastery
+                </div>
+                <h1 class="text-6xl md:text-8xl font-black text-slate-900 leading-[0.95] tracking-tighter mb-10">
+                    Software <br> <span class="text-primary italic">Architecture</span> <br> Redefined.
+                </h1>
+                <p class="text-lg text-slate-500 leading-relaxed max-w-lg mb-12">
+                    I architect massive institutional ERPs using <strong
+                        class="text-slate-900 underline decoration-primary decoration-2">Yii2</strong> and <strong
+                        class="text-slate-900 underline decoration-primary decoration-2">Oracle</strong>. Engineering
+                    high-performance digital ecosystems for the future.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#ecosystem"
+                        class="px-8 py-4 bg-primary text-white rounded-2xl font-bold shadow-2xl shadow-blue-200 hover:scale-105 transition">Explore
+                        the System</a>
+                    <a href="#contact"
+                        class="px-8 py-4 bg-white border-2 border-slate-100 text-slate-900 rounded-2xl font-bold hover:bg-slate-50 transition">Let's
+                        Connect</a>
+                </div>
+            </div>
+
+            <div class="flex justify-center lg:justify-end" data-aos="zoom-out">
+                <div class="relative w-72 h-72 md:w-[500px] md:h-[500px]">
+                    <div class="absolute inset-0 bg-blue-100 image-mask animate-pulse opacity-50"></div>
+                    <div
+                        class="image-mask w-full h-full overflow-hidden border-[12px] border-white shadow-2xl relative z-10">
+                        <!-- ADD_IMAGE_URL -->
+                        <img src="pp.png"
+                            alt="Peter Mpemba" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Arsenal (Categories) -->
+    <section id="arsenal" class="py-32 px-6 bg-slate-50 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20" data-aos="fade-up">
+                <h2 class="text-sm font-bold text-primary uppercase tracking-[0.4em] mb-4">The Technical Arsenal</h2>
+                <h3 class="text-4xl md:text-5xl font-black text-slate-900 tracking-tight">Expertise Stack</h3>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Core Backend -->
+                <div class="arsenal-card p-10 rounded-[3rem] shadow-sm" data-aos="fade-up">
+                    <div
+                        class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200">
+                        <i class="fas fa-bolt"></i></div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-6 tracking-tight">Core Backend</h4>
+                    <ul class="space-y-5 font-bold text-slate-500">
+                        <li class="flex items-center justify-between"><span>Yii2 Framework</span> <span
+                                class="text-[10px] bg-blue-100 text-primary px-2 py-1 rounded">Expert</span></li>
+                        <li class="flex items-center justify-between"><span>Oracle DB & PL/SQL</span> <span
+                                class="text-[10px] bg-blue-100 text-primary px-2 py-1 rounded">Expert</span></li>
+                        <li class="flex items-center justify-between"><span>Laravel</span> <span
+                                class="text-[10px] bg-slate-100 text-slate-400 px-2 py-1 rounded">Proficient</span></li>
+                        <li class="flex items-center justify-between"><span>REST / SOAP APIs</span> <span
+                                class="text-[10px] bg-blue-100 text-primary px-2 py-1 rounded">Expert</span></li>
+                    </ul>
+                </div>
+
+                <!-- Modern Experience -->
+                <div class="arsenal-card p-10 rounded-[3rem] shadow-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-12 h-12 bg-cyan-500 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-cyan-200">
+                        <i class="fab fa-google"></i></div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-6 tracking-tight">Experience Layer</h4>
+                    <ul class="space-y-5 font-bold text-slate-500">
+                        <li class="flex items-center justify-between"><span>Flutter / Dart</span> <span
+                                class="text-[10px] bg-cyan-100 text-cyan-600 px-2 py-1 rounded">Expert</span></li>
+                        <li class="flex items-center justify-between"><span>JavaScript / Vue.js</span> <span
+                                class="text-[10px] bg-cyan-100 text-cyan-600 px-2 py-1 rounded">Fluent</span></li>
+                        <li class="flex items-center justify-between"><span>Bootstrap / Tailwind</span> <span
+                                class="text-[10px] bg-cyan-100 text-cyan-600 px-2 py-1 rounded">Advanced</span></li>
+                        <li class="flex items-center justify-between"><span>UI / UX Design</span> <span
+                                class="text-[10px] bg-cyan-100 text-cyan-600 px-2 py-1 rounded">Lead</span></li>
+                    </ul>
+                </div>
+
+                <!-- Systems Ops -->
+                <div class="arsenal-card p-10 rounded-[3rem] shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-12 h-12 bg-slate-900 text-white rounded-2xl flex items-center justify-center mb-8 shadow-lg">
+                        <i class="fas fa-server"></i></div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-6 tracking-tight">Infrastructure</h4>
+                    <ul class="space-y-5 font-bold text-slate-500">
+                        <li class="flex items-center justify-between"><span>Linux Admin (Ubuntu)</span> <span
+                                class="text-[10px] bg-slate-200 text-slate-700 px-2 py-1 rounded">Advanced</span></li>
+                        <li class="flex items-center justify-between"><span>Git / GitHub DevOps</span> <span
+                                class="text-[10px] bg-slate-200 text-slate-700 px-2 py-1 rounded">Expert</span></li>
+                        <li class="flex items-center justify-between"><span>System Security</span> <span
+                                class="text-[10px] bg-slate-200 text-slate-700 px-2 py-1 rounded">Pro</span></li>
+                        <li class="flex items-center justify-between"><span>Data Analytics</span> <span
+                                class="text-[10px] bg-slate-200 text-slate-700 px-2 py-1 rounded">Expert</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive ERP Ecosystem (The Hub) -->
+    <section id="ecosystem" class="py-32 px-6 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20">
+                <h2 class="text-sm font-bold text-primary uppercase tracking-[0.4em] mb-4">The Master Project</h2>
+                <h3 class="text-5xl font-black text-slate-900 tracking-tight">EASTC ERP Interactive Hub</h3>
+                <p class="text-slate-500 mt-6 text-lg max-w-2xl">A centralized institutional architecture composed of 8+
+                    interconnected modules. Click a system node to engage.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Visual Map -->
+                <div class="relative h-[500px] flex items-center justify-center">
+                    <div class="absolute inset-0 border-[1px] border-slate-100 rounded-full scale-110"></div>
+                    <div class="absolute inset-0 border-[1px] border-slate-100 rounded-full scale-75"></div>
+
+                    <!-- Main Core -->
+                    <div
+                        class="w-32 h-32 bg-primary rounded-full flex items-center justify-center text-white text-4xl shadow-2xl shadow-blue-200 z-10 animate-pulse">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+
+                    <!-- Satellite Nodes -->
+                    <div onclick="activateNode('sis', this)"
+                        class="system-node active absolute top-0 left-1/2 -translate-x-1/2 w-20 h-20 bg-white border border-slate-100 shadow-xl rounded-2xl flex items-center justify-center text-primary text-2xl">
+                        <i class="fas fa-user-graduate"></i></div>
+                    <div onclick="activateNode('olap', this)"
+                        class="system-node absolute top-1/4 right-0 w-20 h-20 bg-white border border-slate-100 shadow-xl rounded-2xl flex items-center justify-center text-primary text-2xl">
+                        <i class="fas fa-laptop-code"></i></div>
+                    <div onclick="activateNode('finance', this)"
+                        class="system-node absolute bottom-1/4 right-0 w-20 h-20 bg-white border border-slate-100 shadow-xl rounded-2xl flex items-center justify-center text-primary text-2xl">
+                        <i class="fas fa-credit-card"></i></div>
+                    <div onclick="activateNode('hostel', this)"
+                        class="system-node absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-20 bg-white border border-slate-100 shadow-xl rounded-2xl flex items-center justify-center text-primary text-2xl">
+                        <i class="fas fa-bed"></i></div>
+                    <div onclick="activateNode('courses', this)"
+                        class="system-node absolute bottom-1/4 left-0 w-20 h-20 bg-white border border-slate-100 shadow-xl rounded-2xl flex items-center justify-center text-primary text-2xl">
+                        <i class="fas fa-chalkboard-teacher"></i></div>
+                    <div onclick="activateNode('transport', this)"
+                        class="system-node absolute top-1/4 left-0 w-20 h-20 bg-white border border-slate-100 shadow-xl rounded-2xl flex items-center justify-center text-primary text-2xl">
+                        <i class="fas fa-bus"></i></div>
+                </div>
+
+                <!-- Dynamic Content Display -->
+                <div id="hub-display"
+                    class="bg-slate-50 p-10 md:p-16 rounded-[4rem] border border-slate-100 shadow-inner transition-all duration-500">
+                    <div id="node-content">
+                        <h4 id="node-title" class="text-4xl font-black text-slate-900 mb-6 tracking-tight">SIS Module
+                        </h4>
+                        <p id="node-desc" class="text-slate-600 text-lg leading-relaxed mb-10">The central database
+                            handling all academic records, automated registration, and dynamic grading logic via complex
+                            Oracle SQL procedures.</p>
+
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+                                <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">Node
+                                    Status</div>
+                                <div class="text-xl font-bold text-green-600">Active & LIVE</div>
+                            </div>
+                            <div class="bg-white p-6 rounded-3xl shadow-sm border border-slate-100">
+                                <div class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-2">
+                                    Architect</div>
+                                <div class="text-xl font-bold text-slate-900">Peter Michael</div>
+                            </div>
+                        </div>
+
+                        <!-- Live Terminal Snip -->
+                        <div class="mt-10 bg-slate-900 rounded-3xl p-6 font-mono text-[11px] text-blue-300 shadow-2xl">
+                            <div id="node-logs" class="space-y-1">
+                                <p class="text-slate-500">// Engaging Node_SIS...</p>
+                                <p>> SELECT * FROM student_master WHERE active=1;</p>
+                                <p class="text-green-400">> SUCCESS: Connection Secure.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Hub -->
+    <section id="contact" class="py-32 px-6 bg-slate-950 text-white relative overflow-hidden">
+        <!-- Abstract Decoration -->
+        <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-primary/20 blur-[120px] rounded-full"></div>
+        <div class="absolute -top-20 -right-20 w-96 h-96 bg-indigo-500/20 blur-[120px] rounded-full"></div>
+
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-24 relative z-10">
+            <div>
+                <h2 class="text-xs font-black text-primary uppercase tracking-[0.5em] mb-8">Contact Node</h2>
+                <h3 class="text-6xl md:text-7xl font-black mb-10 leading-[0.9] tracking-tighter">Ready to <br> <span
+                        class="text-primary italic">initialize?</span></h3>
+                <p class="text-slate-400 text-lg mb-16 max-w-md">I am available for Senior Architect roles and
+                    high-complexity freelance contracts. Let's engineer the future.</p>
+
+                <div class="space-y-8">
+                    <a href="mailto:pierre.michael71@gmail.com" class="flex items-center gap-6 group">
+                        <div
+                            class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center text-3xl group-hover:bg-primary transition duration-500">
+                            <i class="fas fa-envelope"></i></div>
+                        <span
+                            class="text-2xl font-bold group-hover:text-primary transition">pierre.michael71@gmail.com</span>
+                    </a>
+                    <a href="tel:+255714957154" class="flex items-center gap-6 group">
+                        <div
+                            class="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center text-3xl group-hover:bg-green-500 transition duration-500">
+                            <i class="fas fa-phone"></i></div>
+                        <span class="text-2xl font-bold group-hover:text-green-500 transition">+255 714 957 154</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Modern Form -->
+            <div class="bg-white p-12 md:p-16 rounded-[4rem] text-slate-900 shadow-2xl" data-aos="fade-left">
+                <form action="#" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Full Name"
+                            class="w-full p-5 bg-slate-50 border-none rounded-3xl focus:ring-2 ring-primary outline-none text-sm font-bold">
+                        <input type="email" placeholder="Email Address"
+                            class="w-full p-5 bg-slate-50 border-none rounded-3xl focus:ring-2 ring-primary outline-none text-sm font-bold">
+                    </div>
+                    <input type="text" placeholder="Subject / Project"
+                        class="w-full p-5 bg-slate-50 border-none rounded-3xl focus:ring-2 ring-primary outline-none text-sm font-bold">
+                    <textarea rows="4" placeholder="Briefly describe your requirements..."
+                        class="w-full p-5 bg-slate-50 border-none rounded-3xl focus:ring-2 ring-primary outline-none text-sm font-bold"></textarea>
+                    <button
+                        class="w-full py-6 bg-primary text-white rounded-3xl font-black text-sm uppercase tracking-widest shadow-2xl shadow-blue-500/20 hover:scale-[1.02] transition active:scale-95">Send
+                        Transmission</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Footer -->
+    <footer class="py-12 bg-slate-950 text-center border-t border-white/5">
+        <p class="text-slate-600 text-[10px] font-black uppercase tracking-[0.5em]">&copy; 2024 Peter Michael Mpemba.
+            Systems Functional.</p>
+    </footer>
+
+    <!-- Logic Script -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        const nodeData = {
+            sis: { title: "SIS Module", desc: "The core engine handling academic records, automated registration, and dynamic transcript generation via Oracle DB.", logs: ["> Engaged: NODE_SIS", "> SELECT * FROM academic_records;", "> Status: OPTIMIZED"] },
+            olap: { title: "OLAP System", desc: "Online application system integrated with NECTA and TCU APIs for real-time verification and selection logic.", logs: ["> Connecting: GOV_GATEWAY", "> Verifying: Index_Number #9283", "> Status: ADMITTED"] },
+            finance: { title: "Payments Node", desc: "Secure gateway for fee collection via GePG. Real-time reconciliation and automated accounting logs.", logs: ["> Trx_Request: TX9982", "> Webhook: SUCCESS_GEPG", "> Status: PAID"] },
+            hostel: { title: "Hostel Manager", desc: "Automated resource allocator for institutional accommodation, room inventory, and occupancy tracking.", logs: ["> Scan: Inventory_Pool_B", "> Allocating: Room_102", "> Status: LOCKED"] },
+            courses: { title: "Short Courses", desc: "Specialized portal for professional development registration, instant payment, and automated PDF certification.", logs: ["> Cert_Node: ACTIVE", "> Generating: PDF_Certificate", "> Status: EMAILED"] },
+            transport: { title: "Transport Mobile", desc: "Flutter mobile application for real-time fleet tracking, driver assignment, and transport requests.", logs: ["> Flutter: BOOT_PROD", "> Locating: Fleet_01", "> Status: NOTIFIED"] }
+        };
+
+        function activateNode(key, el) {
+            // UI Toggle
+            document.querySelectorAll('.system-node').forEach(n => n.classList.remove('active'));
+            el.classList.add('active');
+
+            const item = nodeData[key];
+            const display = document.getElementById('hub-display');
+            display.style.opacity = '0';
+            display.style.transform = 'translateY(10px)';
+
+            setTimeout(() => {
+                document.getElementById('node-title').innerText = item.title;
+                document.getElementById('node-desc').innerText = item.desc;
+
+                const logContainer = document.getElementById('node-logs');
+                logContainer.innerHTML = '';
+                item.logs.forEach(log => {
+                    const p = document.createElement('p');
+                    p.innerText = log;
+                    if (log.includes('SUCCESS') || log.includes('ADMITTED') || log.includes('PAID')) p.className = "text-green-400";
+                    logContainer.appendChild(p);
+                });
+
+                display.style.opacity = '1';
+                display.style.transform = 'translateY(0)';
+            }, 300);
+        }
+    </script>
+</body>
+
+</html>
